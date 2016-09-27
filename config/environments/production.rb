@@ -78,6 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # Devise installation
+  # https://blooming-ridge-91020.herokuapp.com/ 
   config.action_mailer.default_url_options = { host: 'blog.johnelder.org'}
   
 end
