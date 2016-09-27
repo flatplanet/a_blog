@@ -12,7 +12,12 @@
               
               <%= blog.post_summary %>
         </div>
-          <div class="panel-footer"><%= link_to 'Continue Reading...', blog %></div>
+          <div class="panel-footer">
+            <%= link_to 'Continue Reading...', blog %>
+            <% if user_signed_in? && current_user.admin == 41 %>
+              (<%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>)
+            <% end %> 
+          </div>
       </div>
       <br/><br/>
     <% end %>

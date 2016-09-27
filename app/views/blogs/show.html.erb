@@ -31,8 +31,11 @@
 
 <p>
   <strong>User:</strong>
-  <%= @blog.user %>
+  <%= User.find(@blog.user_id).user_name.titleize %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<% if user_signed_in? && current_user.admin == 41 %>
+  <%= link_to 'Edit', edit_blog_path(@blog) %> | 
+  <%= link_to 'Delete Post', blog_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %> 
 <%= link_to 'Back', blogs_path %>
