@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  post: 
+  meta_keyword: 
+  meta_description: 
+  post_summary: 
+  category: 
+  user_id: 
+
+two:
+  title: 
+  post: 
+  meta_keyword: 
+  meta_description: 
+  post_summary: 
+  category: 
+  user_id: 

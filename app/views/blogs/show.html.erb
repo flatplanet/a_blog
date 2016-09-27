@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @blog.post %>
+</p>
+
+<p>
+  <strong>Meta keyword:</strong>
+  <%= @blog.meta_keyword %>
+</p>
+
+<p>
+  <strong>Meta description:</strong>
+  <%= @blog.meta_description %>
+</p>
+
+<p>
+  <strong>Post summary:</strong>
+  <%= @blog.post_summary %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @blog.category %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @blog.user %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
