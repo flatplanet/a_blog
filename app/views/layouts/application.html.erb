@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JohnElder.org | My Blog</title>
+  <title><%= yield(:title) %> | JohnElder.org</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <% if yield(:meta_description) != "" %>
+    <meta name="description" content="<%= yield(:meta_description) %>">
+  <% end %>
+
 </head>
 <body>
 <%= render "home/nav" %>
