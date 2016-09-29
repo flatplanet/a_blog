@@ -64,10 +64,10 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @fun = (params[:title]) 
+      @fun = (params[:id]) 
       @fun.gsub!('-',' ')
-      @blog =  Blog.find_by(title: (params[:title]))
-      #@blog = Blog.find(params[ :title ])
+      #@blog =  Blog.find_by(title: (params[:title]))
+      @blog = Blog.find_by_title(@fun)
       
     end
 
