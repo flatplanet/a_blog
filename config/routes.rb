@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :blogs, path: "blog"
+  resources :blogs, path: ''
   
-  get '/:title', to: 'blogs#show' #, defaults: { title: :title }
+  
+  get '/:title', to: 'blogs#show'
+  #get ':title', to: 'blogs#show' , defaults: { title: :title }
   devise_for :users
   get 'home/index'
   root 'blogs#index'
