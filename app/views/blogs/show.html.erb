@@ -4,7 +4,7 @@
 <% @blog.post_summary %>
 <% @blog.category %>
 
-<%= Blog.find_by(title: @blog.title).inspect %>
+<% Blog.find_by(title: @blog.title).inspect %>
 
 <br/>
 <div class="panel panel-default">
