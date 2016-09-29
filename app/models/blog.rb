@@ -6,7 +6,8 @@ class Blog < ActiveRecord::Base
   
   def to_param
     # change spaces in title to hyphens -
-    title.gsub!(/\s/,'-')
+    #title.strip.gsub!(/\s/,'-')
+    title.gsub!(' ', '-')
     #change URL from ID to ID-Title
     "#{title}"
   end
