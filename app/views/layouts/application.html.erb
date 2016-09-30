@@ -5,17 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <% if yield(:meta_description) != "" %>
     <meta name="description" content="<%= yield(:meta_description) %>">
   <% end %>
+    
+  <%= render 'home/porto_css' %>
 
 </head>
 <body>
-<%= render "home/nav" %>
+<%= render "home/header" %>
+<% render "home/nav" %>
+
 <div class="container">
   <%= render "home/flash_alerts" %>
   <%= yield %>
 </div>
 
+<%= render 'home/footer' %>
 </body>
 </html>
