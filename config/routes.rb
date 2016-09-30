@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :blogs, path: '' #, param: :title
+  resources :blogs, path: 'posts' #, param: :title
   
   
   #get '/:title', to: 'blogs#show'

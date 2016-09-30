@@ -21,7 +21,28 @@
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
 								
-																
+															
+								
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#">
+										Blog
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<% if user_signed_in? %>
+										  <li><%= link_to "Blog Home", root_path %></li></li>
+                                          <li><%= link_to "New Post", new_blog_path %></li>
+                                          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                                          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                                        <% else %>
+                                          <li><%= link_to "Login", new_user_session_path %></li>
+                                          <li><%= link_to "Blog Home", root_path %></li></li>
+                                        <% end %>	
+									</ul>
+								</li>
+								
+								
+								
 								
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
@@ -61,3 +82,29 @@
 					</div>
 				</div>
 			</header>
+			
+			</div>
+
+				<section class="page-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><%= link_to "Home", root_path %></li>
+									<li class="active"><%= yield(:title) %></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h1><%= yield(:title) %></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+<div class="container">
+
+
+
+<br/>
