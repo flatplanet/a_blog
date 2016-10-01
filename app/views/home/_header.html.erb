@@ -23,6 +23,23 @@
 								
 															
 							
+									<li class="dropdown">
+									<a class="dropdown-toggle" href="#">
+										Blog
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<% if user_signed_in? %>
+										  <li><%= link_to "Blog Home", root_path %></li>
+                                          <li><%= link_to "New Post", new_blog_path %></li>
+                                          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                                          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                                        <% else %>
+                                          <li><%= link_to "Login", new_user_session_path %></li>
+                                          <li><%= link_to "Blog Home", root_path %></li>
+                                        <% end %>	
+									</ul>
+								</li>
 								
 							
 								
